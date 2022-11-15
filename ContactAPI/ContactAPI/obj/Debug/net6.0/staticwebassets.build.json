@@ -1,11 +1,71 @@
 {
   "Version": 1,
-  "Hash": "/2hkw+9z/i2orFOKM/ODN4zhkKxrrf70d8zXyydGWOo=",
+  "Hash": "mtRqoy8xiaHAB5uNoilcD6asWQLGYovg3H8tyvduBJo=",
   "Source": "ContactAPI",
   "BasePath": "_content/ContactAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ContactAPI\\wwwroot",
+      "Source": "ContactAPI",
+      "ContentRoot": "E:\\Curso ASP.NET\\ASPNET_CRUD\\ContactAPI\\ContactAPI\\wwwroot\\",
+      "BasePath": "_content/ContactAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\Curso ASP.NET\\ASPNET_CRUD\\ContactAPI\\ContactAPI\\wwwroot\\Uploads\\Mundo_1668473657710",
+      "SourceId": "ContactAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Curso ASP.NET\\ASPNET_CRUD\\ContactAPI\\ContactAPI\\wwwroot\\",
+      "BasePath": "_content/ContactAPI",
+      "RelativePath": "Uploads/Mundo_1668473657710",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Mundo_1668473657710"
+    },
+    {
+      "Identity": "E:\\Curso ASP.NET\\ASPNET_CRUD\\ContactAPI\\ContactAPI\\wwwroot\\Uploads\\Mundo_1668473729361.png",
+      "SourceId": "ContactAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Curso ASP.NET\\ASPNET_CRUD\\ContactAPI\\ContactAPI\\wwwroot\\",
+      "BasePath": "_content/ContactAPI",
+      "RelativePath": "Uploads/Mundo_1668473729361.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Mundo_1668473729361.png"
+    },
+    {
+      "Identity": "E:\\Curso ASP.NET\\ASPNET_CRUD\\ContactAPI\\ContactAPI\\wwwroot\\Uploads\\Mundo_1668473830510Microsoft.AspNetCore.Http.FormFile",
+      "SourceId": "ContactAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Curso ASP.NET\\ASPNET_CRUD\\ContactAPI\\ContactAPI\\wwwroot\\",
+      "BasePath": "_content/ContactAPI",
+      "RelativePath": "Uploads/Mundo_1668473830510Microsoft.AspNetCore.Http.FormFile",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Mundo_1668473830510Microsoft.AspNetCore.Http.FormFile"
+    }
+  ]
 }

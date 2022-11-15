@@ -34,3 +34,4 @@ E:\Curso ASP.NET\ASPNET_CRUD\ContactAPI\ContactAPI\bin\Debug\net6.0\Microsoft.En
 E:\Curso ASP.NET\ASPNET_CRUD\ContactAPI\ContactAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 E:\Curso ASP.NET\ASPNET_CRUD\ContactAPI\ContactAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.InMemory.dll
 E:\Curso ASP.NET\ASPNET_CRUD\ContactAPI\ContactAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+E:\Curso ASP.NET\ASPNET_CRUD\ContactAPI\ContactAPI\bin\Debug\net6.0\ContactAPI.staticwebassets.runtime.json

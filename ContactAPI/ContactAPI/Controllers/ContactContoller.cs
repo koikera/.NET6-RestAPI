@@ -10,10 +10,13 @@ namespace ContactAPI.Controllers
     public class ContactContoller : Controller
     {
         public readonly ContactAPIDBContext dbContext;
+        public static IWebHostEnvironment _environment;
 
-        public ContactContoller(ContactAPIDBContext dbContext)
+
+        public ContactContoller(ContactAPIDBContext dbContext, IWebHostEnvironment environment)
         {
             this.dbContext = dbContext;
+            _environment = environment;
         }
 
         [HttpGet]
@@ -37,21 +40,48 @@ namespace ContactAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddContact(AddContactRequest addContactRequest)
+        public async Task<IActionResult> AddContact([FromForm] AddContactRequest addContactRequest)
         {
-            var contact = new Contact()
+            try
             {
-                Id = Guid.NewGuid(),
-                Address = addContactRequest.Address,
-                Email = addContactRequest.Email,
-                FullName = addContactRequest.FullName,
-                Phone = addContactRequest.Phone
-            };
+                if (addContactRequest.files.Length > 0)
+                {
+                    if (!Directory.Exists(_environment.WebRootPath + "\\Uploads\\"))
+                    {
+                        Directory.CreateDirectory(_environment.WebRootPath + "\\Uploads\\");
+                    }
+                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Uploads\\" + addContactRequest.Email + "_" + DateTimeOffset.Now.ToUnixTimeMilliseconds()+ "_" + addContactRequest.files.FileName))
+                    {
+                        addContactRequest.files.CopyTo(fileStream);
+                        fileStream.Flush();
+                    }
 
-            await dbContext.Contacts.AddAsync(contact);
-            await dbContext.SaveChangesAsync();
+                }
+                else
+                {
+                    Console.WriteLine("erro na imagem");
+                }
 
-            return Ok(contact);
+                var contact = new Contact()
+                {
+                    Id = Guid.NewGuid(),
+                    Address = addContactRequest.Address,
+                    Email = addContactRequest.Email,
+                    FullName = addContactRequest.FullName,
+                    Phone = addContactRequest.Phone,
+                    files= addContactRequest.files,
+                    anexoName = addContactRequest.anexoName,
+                };
+
+                await dbContext.Contacts.AddAsync(contact);
+                await dbContext.SaveChangesAsync();
+
+                return Ok(contact);
+            } catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
+            
         }
 
         [HttpPut]
